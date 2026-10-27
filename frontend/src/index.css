@@ -1,0 +1,117 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    background-color: #FAF8F3;
+    color: #20233A;
+    font-family: 'Plus Jakarta Sans', 'Manrope', -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+
+  h1, h2, h3, h4, .font-editorial {
+    font-family: 'Manrope', 'Plus Jakarta Sans', sans-serif;
+    letter-spacing: -0.015em;
+  }
+
+  .font-serif-editorial {
+    font-family: 'DM Serif Display', Georgia, serif;
+    letter-spacing: -0.01em;
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply backdrop-blur-md bg-white/75 border border-pink-500/15 shadow-editorial rounded-2xl;
+  }
+
+  .glass-card-pure {
+    @apply backdrop-blur-md bg-white/90 border border-pink-500/20 shadow-editorial-md rounded-2xl;
+  }
+
+  .btn-ombre {
+    @apply bg-gradient-to-r from-pink-600 to-rose-600 hover:from-pink-700 hover:to-rose-700 text-white font-semibold shadow-magenta transition-all duration-200;
+  }
+
+  .badge-ombre {
+    @apply bg-gradient-to-r from-pink-600 to-rose-600 text-white font-bold shadow-sm;
+  }
+
+  .banner-glow {
+    box-shadow: 0 0 0 1px rgba(219, 39, 119, 0.25), 0 16px 40px -8px rgba(225, 29, 72, 0.22);
+  }
+}
+
+/* Custom subtle editorial scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #FAF8F3;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #E2D5DA;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #DB2777;
+}
+
+@keyframes pulseHighlight {
+  0% {
+    box-shadow: 0 0 0 0 rgba(219, 39, 119, 0.45);
+  }
+  70% {
+    box-shadow: 0 0 0 8px rgba(219, 39, 119, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(219, 39, 119, 0);
+  }
+}
+
+.highlight-active-passage {
+  animation: pulseHighlight 2s ease-out infinite;
+}
+
+@keyframes floatSlow {
+  0%, 100% {
+    transform: translateY(0px) rotate(-1.5deg);
+  }
+  50% {
+    transform: translateY(-14px) rotate(0.5deg);
+  }
+}
+
+@keyframes floatDelayed {
+  0%, 100% {
+    transform: translateY(0px) rotate(1.5deg);
+  }
+  50% {
+    transform: translateY(-16px) rotate(-0.8deg);
+  }
+}
+
+@keyframes floatBadge {
+  0%, 100% {
+    transform: translateY(0px) scale(1);
+  }
+  50% {
+    transform: translateY(-10px) scale(1.02);
+  }
+}
+
+.animate-float-slow {
+  animation: floatSlow 6s ease-in-out infinite;
+}
+
+.animate-float-delayed {
+  animation: floatDelayed 7s ease-in-out 1.5s infinite;
+}
+
+.animate-float-badge {
+  animation: floatBadge 5s ease-in-out 0.8s infinite;
+}
