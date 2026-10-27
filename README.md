@@ -1,3 +1,4 @@
+<img width="958" height="446" alt="image" src="https://github.com/user-attachments/assets/575fb474-b8ec-454c-93d3-40951d7ed489" />
 # ClausePilot — Evidence-First AI Contract Intelligence & Obligation Tracking Platform
 
 ClausePilot is a market-ready, full-stack contract intelligence, risk review, redline comparison, and obligation tracking platform built for startup founders, general counsel, procurement teams, and operations managers.
